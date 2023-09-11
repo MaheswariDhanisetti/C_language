@@ -1,0 +1,69 @@
+The tokens of C language can be classified into six types based on the functions they are used to perform. The types of C tokens are as follows:
+
+Keywords
+Identifiers
+Constants
+Strings
+Special Symbols
+Operators
+
+1. C Token – Keywords
+The keywords are pre-defined or reserved words in a programming language. Each keyword is meant to perform a specific function in a program. 
+Since keywords are referred names for a compiler, they can’t be used as variable names because by doing so, we are trying to assign a new meaning to the keyword which is not allowed. 
+C language supports 32 keywords which are given below: 
+auto         double      int        struct
+break        else        long       switch
+case         enum        register   typedef
+char         extern      return     union
+const        float       short      unsigned
+continue     for         signed     void
+default      goto        sizeof     volatile
+do           if          static     while
+
+2. C Token – Identifiers
+Identifiers are used as the general terminology for the naming of variables, functions, and arrays. These are user-defined names .
+For example,
+main: method name.
+a: variable name.
+
+3. C Token – Constants
+The constants refer to the variables with fixed values. They are like normal variables but with the difference that their values can not be modified in the program once they are defined. 
+Constants may belong to any of the data types.
+Examples of Constants in C
+const int c_var = 20;
+const int* const ptr = &c_var;
+
+4. C Token – Strings
+Strings are nothing but an array of characters ended with a null character (‘\0’).
+This null character indicates the end of the string. Strings are always enclosed in double quotes. Whereas, a character is enclosed in single quotes in C and C++
+Examples of String
+char string[20] = {‘g’, ’e’, ‘e’, ‘k’, ‘s’, ‘f’, ‘o’, ‘r’, ‘g’, ’e’, ‘e’, ‘k’, ‘s’, ‘\0’};
+char string[20] = “geeksforgeeks”;
+char string [] = “geeksforgeeks”;
+
+5. C Token – Special Symbols
+The following special symbols are used in C having some special meaning and thus, cannot be used for some other purpose. Some of these are listed below:
+Brackets[]: Opening and closing brackets are used as array element references.
+Parentheses(): These special symbols are used to indicate function calls and function parameters.
+Braces{}: These opening and ending curly braces mark the start and end of a block of code containing more than one executable statement.
+Comma (, ): It is used to separate more than one statement like for separating parameters in function calls.
+Colon(:): It is an operator that essentially invokes something called an initialization list.
+Semicolon(;): It is known as a statement terminator.  It indicates the end of one logical entity. That’s why each individual statement must be ended with a semicolon.
+Asterisk (*): It is used to create a pointer variable and for the multiplication of variables.
+Assignment operator(=): It is used to assign values and for logical operation validation.
+Pre-processor (#): The preprocessor is a macro processor that is used automatically by the compiler to transform your program before actual compilation.
+Period (.): Used to access members of a structure or union.
+Tilde(~): Used as a destructor to free some space from memory.
+
+6. C Token – Operators
+Operators are symbols that trigger an action when applied to C variables and other objects. The data items on which operators act are called operands. 
+Depending on the number of operands that an operator can act upon, operators can be classified as follows: 
+Unary Operators: Those operators that require only a single operand to act upon are known as unary operators.For Example increment and decrement operators
+Binary Operators: Those operators that require two operands to act upon are called binary operators. Binary operators can further are classified into: 
+Arithmetic operators
+Relational Operators
+Logical Operators
+Assignment Operators
+Bitwise Operator
+Ternary Operator: The operator that requires three operands to act upon is called the ternary operator. Conditional Operator(?) is also called the ternary operator.
+
