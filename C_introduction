@@ -1,0 +1,21 @@
+C is a procedural programming language initially developed by Dennis Ritchie in the year 1972 at Bell Laboratories of AT&T Labs. 
+It was mainly developed as a system programming language to write the UNIX operating system.
+
+Sections of the C Program
+A C program is divided into six sections: 
+Documentation
+Link, Definition 
+Global Declaration 
+Main() function
+Subprograms 
+
+example:
+#include <stdio.h> //Header Files Inclusion – Line 1
+int main() { //Main Method Declaration – Line 2
+  int a = 10;       //Body of Main Method – Line 3 to Line 6
+
+  printf("%d", a);  //Statement – Line 4 
+  return 0;  //Return Statement – Line 5
+}
+
+
