@@ -13,9 +13,29 @@ example:
 #include <stdio.h> //Header Files Inclusion – Line 1
 int main() { //Main Method Declaration – Line 2
   int a = 10;       //Body of Main Method – Line 3 to Line 6
-
   printf("%d", a);  //Statement – Line 4 
   return 0;  //Return Statement – Line 5
 }
+
+Here are some of the most important features of the C language:
+Procedural Language -->In a procedural language like C step by step, predefined instructions are carried out.
+Fast and Efficient --> It’s fast because statically typed languages are faster than dynamically typed languages.
+Modularity -->The concept of storing C programming language code in the form of libraries for further future uses is known as modularity. 
+Statically Type -->Meaning the type of variable is checked at the time of compilation but not at run time. This means each time a programmer types a program they have to mention the type of variables used
+General-Purpose Language -->From system programming to photo editing software, the C programming language is used in various applications. 
+Rich set of built-in Operators --> It is a diversified language with a rich set of built-in operators which are used in writing complex or simplified C programs.
+Libraries with Rich Functions -->Robust libraries and functions in C help even a beginner coder to code with ease.
+Middle-Level Language -->As it is a middle-level language so it has the combined form of both capabilities of assembly language and features of the high-level language.
+Portability -->C language is lavishly portable as programs that are written in C language can run and compile on any system with either no or small changes. 
+Easy to Extend -->means when a program is already written in it then some more features and operations can be added to it.
+
+COMMENTS IN C:
+The comments in C are human-readable explanations or notes in the source code of a C program. 
+A comment makes the program easier to read and understand. These are the statements that are not executed by the compiler or an interpreter.
+In C there are two types of comments in C language:
+Single-line comment --> A single-line comment in C starts with ( // ) double forward slash. It extends till the end of the line and we don’t need to specify its end.
+Multi-line comment --> The Multi-line comment in C starts with a forward slash and asterisk ( /* ) and ends with an asterisk and forward slash ( */ ).
+Any text between /* and */ is treated as a comment and is ignored by the compiler.
+
 
 
