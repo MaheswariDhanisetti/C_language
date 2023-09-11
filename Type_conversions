@@ -1,0 +1,66 @@
+Type conversion in C is the process of converting one data type to another. The type conversion is only performed to those data types where conversion is possible. 
+Type conversion is performed by a compiler. In type conversion, the destination data type can’t be smaller than the source data type.
+Type conversion is done at compile time and it is also called widening conversion because the destination data type can’t be smaller than the source data type.
+There are two types of Conversion:
+
+1. Implicit Type Conversion
+Implicit Type Conversion in C
+Also known as ‘automatic type conversion’.
+A. Done by the compiler on its own, without any external trigger from the user.
+B. Generally takes place when in an expression more than one data type is present. In such conditions type conversion (type promotion) takes place to avoid loss of data.
+All the data types of the variables are upgraded to the data type of the variable with the largest data type.
+bool -> char -> short int -> int -> unsigned int -> long -> unsigned -> long long -> float -> double -> long double
+D. It is possible for implicit conversions to lose information, signs can be lost (when signed is implicitly converted to unsigned), and overflow can occur (when long is implicitly converted to float).
+
+Example 1:
+#include <stdio.h>
+int main()
+{
+	int x = 10; // integer x
+	char y = 'a'; // character c
+
+	// y implicitly converted to int. ASCII
+	// value of 'a' is 97
+	x = x + y;
+
+	// x is implicitly converted to float
+	float z = x + 1.0;
+
+	printf("x = %d, z = %f", x, z);
+	return 0;
+}
+
+Output
+x = 107, z = 108.000000
+
+
+2. Explicit Type Conversion
+This process is also called type casting and it is user-defined. Here the user can typecast the result to make it of a particular data type. The syntax in C Programming:
+(type) expression
+Type indicated the data type to which the final result is converted.
+
+Example no 2
+#include<stdio.h>   
+int main()
+{
+    double x = 1.2;
+    // Explicit conversion from double to int
+    int sum = (int)x + 1;
+    printf("sum = %d", sum);
+    return 0;
+}
+Output
+sum = 2
+
+Example no 3
+#include <stdio.h>
+int main() {
+  float a = 1.5;
+  int b = (int)a;
+  printf("a = %f\n", a);
+  printf("b = %d\n", b);
+  return 0;
+}
+Output
+a = 1.500000
+b = 1
