@@ -1,0 +1,109 @@
+VARIABLES:
+A variable in C language is the name associated with some memory location to store data of different types.
+There are many types of variables in C depending on the scope, storage class, lifetime, type of data they store, etc. 
+A variable is the basic building block of a C program that can be used in expressions as a substitute in place of the value it stores.
+
+Variable Syntax:
+The syntax to declare a variable in C specifies the name and the type of the variable.
+data_type variable_name = value;  // defining single variable   ( or)
+data_type variable_name1, variable_name2; // defining multiple variable.
+  
+There are 3 aspects of defining a variable:
+1.Variable Declaration 
+  --> It tells the compiler about the existence of the variable with the given name and data type. No memory is allocated to a variable in the declaration.
+2.Variable Definition 
+  -->In the definition of a C variable, the compiler allocates some memory and some value to it.
+  -->A defined variable will contain some random garbage value till it is not initialized. ex:int var; , char var2;
+3.Variable Initialization
+  -->Initialization of a variable is the process where the user assigns some meaningful value to the variable.
+  -->int var = 10;
+
+C Variable Types:
+The C variables can be classified into the following types:
+1.Local Variables 
+  -->A Local variable in C is a variable that is declared inside a function or a block of code.Its scope is limited to the block or function in which it is declared.
+2.Global Variables
+    -->A Global variable in C is a variable that is declared outside the function or a block of code. Its scope is the whole program i.e. 
+    -->we can access the global variable anywhere in the C program after it is declared.
+3.Static Variables
+    -->A static variable in C is a variable that is defined using the static keyword.
+    -->It can be defined only once in a C program and its scope depends upon the region where it is declared (can be global or local).
+    -->The default value of static variables is zero. syntax:static data_type variable_name = initial_value;
+    -->example:
+// C program to demonstrate use of static variable
+#include <stdio.h>
+void function()
+{
+	int x = 20; // local variable
+	static int y = 30; // static variable
+	x = x + 10;
+	y = y + 10;
+	printf("\tLocal: %d\n\tStatic: %d\n", x, y);
+}
+int main()
+{
+	printf("First Call\n");
+	function();
+	printf("Second Call\n");
+	function();
+	printf("Third Call\n");
+	function();
+	return 0;
+}
+Output
+First Call
+    Local: 30
+    Static: 40
+Second Call
+    Local: 30
+    Static: 50
+Third Call
+    Local: 30
+    Static: 60
+    
+4.Automatic Variables
+    -->All the local variables are automatic variables by default. They are also known as auto variables.
+    --> syntax:auto data_type variable_name; ( or) data_type variable_name; 
+5.Extern Variables
+    -->External variables in C can be shared between multiple C files. We can declare an external variable using the extern keyword.
+    -->Their scope is global and they exist between multiple C files.
+    -->syntax:extern data_type variable_name;
+6.Register Variables
+    -->Register variables in C are those variables that are stored in the CPU register instead of the conventional storage place like RAM.
+    -->Their scope is local and exists till the end of the block or a function.
+    -->syntax: register data_type variable_name = initial_value;
+
+constant variable :
+ -->A constant variable in C is a read-only variable whose value cannot be modified once it is defined. 
+ -->We can declare a constant variable using the const keyword. syntax:const data_type variable_name = value;
+ -->Syntax of Constant in C using #define: #define const_name value
+-->changing constant value:
+// C Program to change the value of constant variable
+#include <stdio.h>
+int main()
+{
+	// defining an integer constant
+	const int var = 10;
+	printf("Initial Value of Constant: %d\n", var);
+	// defining a pointer to that const variable
+	int* ptr = &var;
+	// changing value
+	*ptr = 500;
+	printf("Final Value of Constant: %d", var);
+	return 0;
+}
+Output
+Initial Value of Constant: 10
+Final Value of Constant: 500
+
+There are many different ways to make the variable as constant
+1.Using const keyword: The const keyword specifies that a variable or object value is constant and can’t be modified at the compilation time.
+2.Using enum keyword: Enumeration (or enum) is a user defined data type in C and C++. 
+  It is mainly used to assign names to integral constants, that make a program easy to read and maintain.
+  // In C and C++ internally the default type of 'var' is int --> enum VARS { var = 42 };
+  // In C++ 11 (can have any integral type):  --> enum : type { var = 42; }
+  // where mytype = int, char, long etc. but it can't be float, double or user defined data type.
+3.Using constexpr keyword: Using constexpr in C++(not in C) can be used to declare variable as a guaranteed constant.
+  But it would fail to compile if its initializer isn’t a constant expression. ex:constexpr int k = var;
+4.Using Macros: We can also use Macros to define constant, but there is a catch, ex: #define var 5
+      
